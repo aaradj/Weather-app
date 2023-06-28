@@ -1,12 +1,10 @@
-import styled from "styled-components";
+import { styled } from '@mui/system';
 
-const Container = styled.div`
-height:100vh;
-display:grid;
-place-items:center;
-padding:1.2rem;
-
-`;
-
+const Container = styled("div")({
+    height:"100vh",
+    display:"grid",
+    placeItems:"center",
+    padding:"1.2rem",
+});
 
 export { Container };

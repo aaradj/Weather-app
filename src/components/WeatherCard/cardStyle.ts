@@ -1,24 +1,23 @@
-import styled from "styled-components";
+import { styled } from '@mui/system';
 
-const H2 = styled.h2`
-  font-size:1.2rem;
-  color:#53627c;
-  font-weight:400;
-  text-align:center;
-`;
+const H2 = styled("h2")({
+  fontSize:"1.2rem",
+  color:"#53627c",
+  fontWeight:"400",
+  textAlign:"center",
+});
 
 
-const Degre = styled.p`
-  font-size:5rem;
-  font-weight:bold;
-  color:black;
-`;
+const Degre = styled("p")({
+  fontSize:"5rem",
+  fontWeight:"bold",
+  color:"black",
+})
 
-const Image = styled.img`
-  width:90px;
-  height:90px;
-`;
-
+const Image = styled("img")({
+  width:"90px",
+  height:"90px",
+})
 const bgStyle:React.CSSProperties = {
   background: "rgba(255, 255, 255, 0.81)",
   borderRadius: "16px",

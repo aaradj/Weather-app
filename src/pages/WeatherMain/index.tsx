@@ -14,6 +14,7 @@ import { CGrid } from "./weatherMainStyle";
 import WeatherCard from "../../components/WeatherCard";
 // Authentication
 import Authorize from "../../components/Auth";
+import { RemoveDuplicates } from "../../components/helper";
 
 const allData:any = [];
 const apiKey = '16be5034253e79ee7c3745dc69157f91';
@@ -37,7 +38,8 @@ function WeatherMain() {
         .then(response=>{
               setError(undefined)
               allData.push(response.data)
-              setData(allData);
+              const newData =  RemoveDuplicates(allData);
+              setData(newData);
               setValue('');
         })
 

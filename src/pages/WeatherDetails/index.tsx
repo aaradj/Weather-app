@@ -15,13 +15,14 @@ function WeatherDetails() {
   const navigate = useNavigate();
 
   const {data} = useContext(weatherContext);
+  
   return (
     <Authorize>
     <Container>
         {
           data.map((item:any, index:number)=> {
-            console.log(item);
             const {main,name,sys,weather} = item;
+            
             const icon=`https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0]["icon"]}.svg`;
             if(localStorage.getItem(item.sys.id)){
               return(

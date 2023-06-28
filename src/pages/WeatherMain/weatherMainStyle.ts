@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import { styled } from '@mui/system';
 
-const CGrid = styled.form`
-display:flex;
-align-items:center;
-justify-content:center;
-gap: .5rem;
-`;
+const CGrid = styled("div")({
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    gap:".5rem",
+});
+
 
 export { CGrid }
